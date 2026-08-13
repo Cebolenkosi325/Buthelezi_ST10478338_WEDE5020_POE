@@ -23,3 +23,14 @@ The project has 3 parts: HTML structure (Part 1), CSS styling (Part 2), JavaScri
 - Contact page with address, map and contact form
 
 ## Sitemap
+- Home (index.html)
+- About Us (about.html)
+- Products (product.html)
+- Enquiry (enquiry.html)
+- Contact (contact.html)
+
+## Changelog
+- Added HTML structure for all 5 pages (Part 1)
+
+## References
+- Add sources used here (images, code snippets, content you referenced)
