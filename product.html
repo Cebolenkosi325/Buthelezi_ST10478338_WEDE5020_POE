@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Sunrise Bakery</title>
+    <title>Bread, Cakes and Pastries | Sunrise Bakery Products</title>
+    <meta name="description" content="Search the fresh bread, custom cakes and pastries baked daily at Sunrise Bakery in Centurion, Gauteng. Filter by category and sort by price.">
+    <meta name="keywords" content="bread, cakes, pastries, cupcakes, croissants, muffins, doughnuts, Centurion bakery">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,24 +27,45 @@
 
     <main>
 
-        <section class="products-feature">
-            <div>
-                <img src="images/picture5-xitm.jpg" alt="Fresh Bread">
-                <h2>Our Fresh Bread</h2>
-                <p>Freshly baked bread made every morning with quality ingredients.</p>
+        <section class="menu">
+            <h2>Our Menu</h2>
+            <p>Search our products, choose a category or change the order.</p>
+
+            <!-- Search, filter and sort controls -->
+            <div class="menu-tools">
+                <div>
+                    <label for="searchBox">Search:</label>
+                    <input type="search" id="searchBox" placeholder="Try croissant or chocolate">
+                </div>
+
+                <div>
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All products</option>
+                        <option value="Bread">Bread</option>
+                        <option value="Cakes">Cakes</option>
+                        <option value="Pastries">Pastries</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sortBox">Sort by:</label>
+                    <select id="sortBox">
+                        <option value="name">Name (A to Z)</option>
+                        <option value="low">Price (low to high)</option>
+                        <option value="high">Price (high to low)</option>
+                    </select>
+                </div>
             </div>
 
-            <div>
-                <img src="images/picture2-xitm.jpg" alt="Fresh Cakes">
-                <h2>Cakes</h2>
-                <p>Birthday cakes, wedding cakes and cupcakes.</p>
-            </div>
+            <p id="resultCount" class="result-count" aria-live="polite"></p>
 
-            <div>
-                <img src="images/picture3-xitm.jpg" alt="Fresh Pastries">
-                <h2>Pastries</h2>
-                <p>Croissants, muffins and doughnuts.</p>
-            </div>
+            <!-- JavaScript puts the product cards in here -->
+            <div id="productList" class="product-list"></div>
+
+            <noscript>
+                <p>Please turn on JavaScript to see the product list. We bake bread, cakes and pastries fresh every day.</p>
+            </noscript>
         </section>
 
     </main>
@@ -54,6 +77,8 @@
         <p>Facebook | Instagram</p>
     </footer>
 
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
