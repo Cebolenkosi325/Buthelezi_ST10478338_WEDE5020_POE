@@ -1,0 +1,762 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #fff8f0; 
+    color: #4a2c1a; 
+    line-height: 1.6; 
+} 
+ 
+/* Header */ 
+ 
+header { 
+    background-color: #6b3e26; 
+    color: white; 
+    padding: 20px 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+} 
+ 
+header h1 { 
+    font-size: 28px; 
+} 
+ 
+/* Navigation */ 
+ 
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-size: 14px; 
+} 
+ 
+nav a:hover { 
+    color: #e8752a; 
+} 
+ 
+/* Button */ 
+ 
+.menu-button { 
+    display: inline-block; 
+    background-color: #e8752a; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 25px; 
+    margin-top: 15px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+} 
+ 
+.menu-button:hover { 
+    background-color: #6b3e26; 
+} 
+ 
+/* Home page */ 
+ 
+.hero { 
+    text-align: center; 
+    padding: 30px 20px; 
+    background-color: #fff8f0; 
+} 
+ 
+.hero-image { 
+    width: 100%; 
+    max-width: 1000px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    display: block; 
+    margin: 0 auto 20px; 
+} 
+ 
+.hero h2 { 
+    color: #6b3e26; 
+    font-size: 30px; 
+    margin-bottom: 10px; 
+} 
+ 
+.hero p { 
+    max-width: 700px; 
+    margin: 0 auto; 
+    font-size: 16px; 
+} 
+ 
+/* Home page products */ 
+ 
+.products { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 40px 20px; 
+    background-color: #f5e6d3; 
+} 
+ 
+.product-card { 
+    width: 300px; 
+    padding: 15px; 
+    background-color: white; 
+    text-align: center; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); 
+} 
+ 
+.product-card img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    display: block; 
+} 
+ 
+.product-card h3 { 
+    color: #6b3e26; 
+    font-size: 22px; 
+    margin-top: 10px; 
+} 
+ 
+.product-card p { 
+    font-size: 15px; 
+    margin-top: 5px; 
+} 
+ 
+/* Products page */ 
+ 
+.products-feature { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 40px 20px; 
+    background-color: #fff8f0; 
+} 
+ 
+.products-feature div { 
+    width: 300px; 
+    padding: 15px; 
+    background-color: white; 
+    text-align: center; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); 
+} 
+ 
+.products-feature img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    display: block; 
+} 
+ 
+.products-feature h2 { 
+    color: #6b3e26; 
+    font-size: 22px; 
+    margin-top: 10px; 
+} 
+ 
+.products-feature p { 
+    font-size: 15px; 
+    margin-top: 5px; 
+} 
+ 
+/* About */ 
+ 
+.about { 
+    text-align: center; 
+    padding: 50px 20px; 
+    background-color: #fff8f0; 
+} 
+ 
+.about h2 { 
+    color: #6b3e26; 
+    font-size: 30px; 
+    margin-bottom: 15px; 
+} 
+ 
+.about p { 
+    max-width: 750px; 
+    margin: 0 auto; 
+    font-size: 16px; 
+} 
+ 
+/* Forms */ 
+ 
+form { 
+    max-width: 600px; 
+    margin: 30px auto; 
+    padding: 25px; 
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); 
+} 
+ 
+form label { 
+    display: block; 
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+} 
+ 
+form input, 
+form select, 
+form textarea { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-family: Arial, sans-serif; 
+} 
+ 
+form button { 
+    background-color: #e8752a; 
+    color: white; 
+    border: none; 
+    padding: 12px 25px; 
+    margin-top: 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+} 
+ 
+form button:hover { 
+    background-color: #6b3e26; 
+} 
+ 
+/* Footer */ 
+ 
+footer { 
+    background-color: #6b3e26; 
+    color: white; 
+    text-align: center; 
+    padding: 30px 20px; 
+    margin-top: 20px; 
+} 
+ 
+footer p { 
+    margin: 8px 0; 
+    font-size: 14px; 
+} 
+ 
+/* Mobile */ 
+ 
+@media screen and (max-width: 768px) { 
+ 
+    header { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 20px; 
+    } 
+ 
+    header h1 { 
+        margin-bottom: 15px; 
+    } 
+ 
+    nav a { 
+        display: inline-block; 
+        margin: 5px 8px; 
+        font-size: 14px; 
+    } 
+ 
+    .hero-image { 
+        height: 250px; 
+    } 
+ 
+    .hero h2 { 
+        font-size: 24px; 
+    } 
+ 
+    .products { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+ 
+    .product-card { 
+        width: 90%; 
+        max-width: 300px; 
+    } 
+ 
+    .product-card img { 
+        height: 220px; 
+    } 
+ 
+    .products-feature { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+ 
+    .products-feature div { 
+        width: 90%; 
+        max-width: 300px; 
+    } 
+ 
+    .products-feature img { 
+        height: 220px; 
+    } 
+ 
+    .about { 
+        padding: 35px 20px; 
+    } 
+ 
+    .about h2 { 
+        font-size: 26px; 
+    } 
+ 
+    form { 
+        width: 90%; 
+    } 
+}
+/* Form errors and extra form controls */
+.error-message {
+    display: block;
+    color: #b42318;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.error-input {
+    border: 2px solid #b42318;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #e8752a;
+    outline: none;
+}
+
+form button:active {
+    background-color: #4a2c1a;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+form label.option {
+    font-weight: normal;
+    margin-top: 8px;
+}
+
+fieldset {
+    border: none;
+    margin-top: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+/* Box that shows the response after a form is sent */
+.response-box {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff1de;
+    border-left: 5px solid #e8752a;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.response-box p {
+    margin-bottom: 8px;
+}
+
+.response-box pre {
+    white-space: pre-wrap;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+/* Gallery */
+
+.gallery {
+    padding: 40px 20px;
+    background-color: #f5e6d3;
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #6b3e26;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 20px auto 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+.gallery-grid img:focus {
+    outline: 3px solid #e8752a;
+}
+
+/* Lightbox */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* without this line the hidden attribute would not hide the lightbox, because of display: flex above */
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    max-width: 700px;
+    margin-top: 12px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 36px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#lightboxPrevious {
+    left: 15px;
+}
+
+#lightboxNext {
+    right: 15px;
+}
+
+.lightbox-close:hover,
+.lightbox-arrow:hover {
+    color: #e8752a;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+
+    .gallery-grid img {
+        height: 140px;
+    }
+
+    .lightbox-arrow {
+        font-size: 28px;
+        padding: 8px 12px;
+    }
+}
+/* Product search and list */
+
+.menu {
+    padding: 40px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.menu h2 {
+    color: #6b3e26;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.menu-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 25px auto 10px;
+    text-align: left;
+}
+
+.menu-tools div {
+    flex: 1 1 220px;
+}
+
+.menu-tools label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.menu-tools input,
+.menu-tools select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.menu-tools input:focus,
+.menu-tools select:focus {
+    border-color: #e8752a;
+    outline: none;
+}
+
+.result-count {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    width: 260px;
+    padding-bottom: 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-category {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 2px 10px;
+    background-color: #f5e6d3;
+    color: #6b3e26;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu-card h3 {
+    margin-top: 8px;
+    font-size: 20px;
+    color: #6b3e26;
+}
+
+.menu-card p {
+    margin: 5px 15px;
+    font-size: 15px;
+}
+
+.menu-price {
+    color: #e8752a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-card .menu-button {
+    padding: 8px 18px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+/* FAQ accordion */
+
+.faq {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.faq h2 {
+    color: #6b3e26;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.accordion-button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 20px;
+    background-color: white;
+    color: #6b3e26;
+    border: 1px solid #e6d5c0;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* the plus sign on the right, which changes to a minus when the question is open */
+.accordion-button::after {
+    content: "+";
+    float: right;
+    color: #e8752a;
+    font-size: 22px;
+}
+
+.accordion-button.open::after {
+    content: "\2212";
+}
+
+.accordion-button:hover {
+    background-color: #f5e6d3;
+}
+
+.accordion-button:focus {
+    outline: 2px solid #e8752a;
+}
+
+.accordion-button.open {
+    background-color: #f5e6d3;
+    border-radius: 8px 8px 0 0;
+}
+
+.accordion-panel {
+    padding: 15px 20px;
+    background-color: #fff1de;
+    border: 1px solid #e6d5c0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    animation: fadeIn 0.3s;
+}
+
+.accordion-panel p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Map */
+
+.map-section {
+    padding: 40px 20px;
+    background-color: #f5e6d3;
+    text-align: center;
+}
+
+.map-section h2 {
+    color: #6b3e26;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#map {
+    height: 400px;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.location-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.location-buttons button {
+    padding: 10px 20px;
+    background-color: #e8752a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.location-buttons button:hover {
+    background-color: #6b3e26;
+}
+
+.location-buttons button:active {
+    background-color: #4a2c1a;
+}
+
+@media screen and (max-width: 480px) {
+
+    #map {
+        height: 300px;
+    }
+}
+
+/* Show each line of a response on its own line */
+
+.response-box {
+    white-space: pre-line;
+}
