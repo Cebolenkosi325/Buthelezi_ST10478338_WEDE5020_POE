@@ -1,0 +1,304 @@
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #4a2c1a;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #6b3e26;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.menu-button {
+    display: inline-block;
+    background-color: #e8752a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu-button:hover {
+    background-color: #6b3e26;
+}
+
+nav a:hover {
+    color: #e8752a;
+}
+/* Hero section */
+section:first-of-type {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff8f0;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+section:first-of-type h2 {
+    font-size: 30px;
+    color: #6b3e26;
+    margin-bottom: 10px;
+}
+
+section:first-of-type p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+/* Featured Products */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    background-color: #f5e6d3;
+}
+
+.products div {
+    background-color: white;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.products img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.products h3 {
+    color: #6b3e26;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.products p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+/* About Us */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff8f0;
+}
+
+.about h2 {
+    color: #6b3e26;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+/* Footer */
+footer {
+    background-color: #6b3e26;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin-bottom: 15px;
+    }
+
+    /* Navigation */
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    /* Hero image */
+    .hero-image {
+        height: 250px;
+    }
+
+    section:first-of-type h2 {
+        font-size: 24px;
+    }
+
+    /* Product cards */
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products div {
+        width: 90%;
+    }
+
+    .products img {
+        height: 220px;
+    }
+
+    /* About */
+    .about {
+        padding: 35px 20px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+}
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    background-color: #e8752a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #6b3e26;
+}
+/* Featured Product Image */
+.product-feature {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.product-feature img {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-feature h2 {
+    color: #6b3e26;
+    font-size: 28px;
+    margin-top: 15px;
+}
+
+.product-feature p {
+    font-size: 16px;
+}
+/* Fix oversized product images */
+.products-feature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products-feature div {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.products-feature img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Same fix for the homepage product cards */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
