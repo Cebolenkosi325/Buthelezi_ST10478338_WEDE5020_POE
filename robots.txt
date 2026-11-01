@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cebolenkosi325.github.io/Buthelezi_ST10478338_WEDE5020_POE/sitemap.xml
