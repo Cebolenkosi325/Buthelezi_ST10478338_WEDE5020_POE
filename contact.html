@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Sunrise Bakery</title>
+    <title>Contact Sunrise Bakery | Bakery in Centurion, Gauteng</title>
+    <meta name="description" content="Contact Sunrise Bakery in Centurion, Gauteng. Find our address, phone number and opening hours, see our shops on the map, or send us a message online.">
+    <meta name="keywords" content="Sunrise Bakery contact, bakery Centurion, bakery opening hours, bakery Gauteng, bakery map">
 
+    <!-- Leaflet map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -43,21 +47,59 @@
 
             <h3>Send Us a Message</h3>
 
-            <form>
+            <form id="contactForm" action="#" novalidate>
 
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
+                <small id="nameError" class="error-message"></small>
 
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
+                <small id="emailError" class="error-message"></small>
+
+                <label for="phone">Phone Number (optional):</label>
+                <input type="tel" id="phone" name="phone" placeholder="0821234567">
+                <small id="phoneError" class="error-message"></small>
+
+                <label for="type">Type of Message:</label>
+                <select id="type" name="type" required>
+                    <option value="">Choose an option</option>
+                    <option value="General question">General question</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Compliment">Compliment</option>
+                    <option value="Complaint">Complaint</option>
+                </select>
+                <small id="typeError" class="error-message"></small>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6"></textarea>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                <small id="messageError" class="error-message"></small>
 
                 <button type="submit">Send Message</button>
 
             </form>
 
+            <!-- The email that was put together is shown here -->
+            <div id="response" class="response-box" hidden>
+                <p id="thanksText"></p>
+                <pre id="emailPreview"></pre>
+                <a id="sendLink" class="menu-button" href="#">Open my email to send</a>
+            </div>
+
+        </section>
+
+        <!-- Map with the three places where we sell -->
+        <section class="map-section">
+            <h2>Find Us</h2>
+            <p>You can buy from us in three places. Click a button or a marker on the map.</p>
+
+            <div id="map"></div>
+
+            <div class="location-buttons">
+                <button type="button" onclick="goToLocation(0)">Main shop, Centurion</button>
+                <button type="button" onclick="goToLocation(1)">Irene shop</button>
+                <button type="button" onclick="goToLocation(2)">Saturday market stall</button>
+            </div>
         </section>
 
     </main>
@@ -69,6 +111,10 @@
         <p>Facebook | Instagram</p>
     </footer>
 
+    <!-- Leaflet must load before map.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>
