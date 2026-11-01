@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Sunrise Bakery</title>
+    <title>Custom Cake and Catering Enquiry | Sunrise Bakery</title>
+    <meta name="description" content="Ask Sunrise Bakery in Centurion about custom cakes and catering. Fill in the enquiry form to get an estimated cost and availability.">
+    <meta name="keywords" content="custom cakes Centurion, catering Centurion, birthday cakes, wedding cakes, bakery enquiry, Sunrise Bakery">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,34 +32,102 @@
 
             <p>
                 Contact Sunrise Bakery for custom cake and catering requests.
-                Please complete the form below and we will get back to you.
+                Complete the form below and you will see an estimated cost
+                and whether we can make your date.
             </p>
 
-            <form>
+            <form id="enquiryForm" action="#" novalidate>
 
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
+                <small id="nameError" class="error-message"></small>
 
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
+                <small id="emailError" class="error-message"></small>
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" placeholder="0821234567" required>
+                <small id="phoneError" class="error-message"></small>
 
                 <label for="type">Enquiry Type:</label>
-                <select id="type" name="type">
+                <select id="type" name="type" required>
+                    <option value="">Choose an option</option>
                     <option value="custom-cake">Custom Cake</option>
                     <option value="catering">Catering</option>
                     <option value="general">General Enquiry</option>
                 </select>
+                <small id="typeError" class="error-message"></small>
+
+                <label for="guests">Number of People (cakes and catering only):</label>
+                <input type="number" id="guests" name="guests" min="1" max="500" step="1">
+                <small id="guestsError" class="error-message"></small>
+
+                <label for="date">Date Needed (cakes and catering only):</label>
+                <input type="date" id="date" name="date">
+                <small id="dateError" class="error-message"></small>
+
+                <fieldset>
+                    <legend>Preferred Contact Method:</legend>
+                    <label class="option"><input type="radio" name="contactMethod" value="Email"> Email</label>
+                    <label class="option"><input type="radio" name="contactMethod" value="Phone"> Phone</label>
+                </fieldset>
+                <small id="methodError" class="error-message"></small>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6"></textarea>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us about flavours, size, theme or anything else"></textarea>
+                <small id="messageError" class="error-message"></small>
+
+                <label class="option">
+                    <input type="checkbox" id="terms" name="terms">
+                    I agree that Sunrise Bakery may contact me about this enquiry.
+                </label>
+                <small id="termsError" class="error-message"></small>
 
                 <button type="submit">Send Enquiry</button>
 
             </form>
 
+            <!-- The response from the bakery is shown here after the form passes validation -->
+            <div id="response" class="response-box" hidden></div>
+
+        </section>
+
+        <!-- FAQ: click a question to open the answer -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="accordion">
+
+                <button class="accordion-button" aria-expanded="false" aria-controls="faq1">
+                    How much notice do you need?
+                </button>
+                <div class="accordion-panel" id="faq1" hidden>
+                    <p>A custom cake needs at least 3 days notice. A catering order needs at least 7 days notice.</p>
+                </div>
+
+                <button class="accordion-button" aria-expanded="false" aria-controls="faq2">
+                    How much does an order cost?
+                </button>
+                <div class="accordion-panel" id="faq2" hidden>
+                    <p>Custom cakes cost about R40 per person and catering about R85 per person. Send the form above and we will confirm the final price.</p>
+                </div>
+
+                <button class="accordion-button" aria-expanded="false" aria-controls="faq3">
+                    Can you make a cake for someone with an allergy?
+                </button>
+                <div class="accordion-panel" id="faq3" hidden>
+                    <p>Tell us about any allergy in the message box. Our kitchen uses wheat, eggs, milk and nuts, so we cannot promise that a product is free of them.</p>
+                </div>
+
+                <button class="accordion-button" aria-expanded="false" aria-controls="faq4">
+                    When are you open?
+                </button>
+                <div class="accordion-panel" id="faq4" hidden>
+                    <p>Monday to Friday 7:00 AM to 6:00 PM, Saturday 7:00 AM to 4:00 PM and Sunday 8:00 AM to 2:00 PM.</p>
+                </div>
+
+            </div>
         </section>
 
     </main>
@@ -69,6 +139,8 @@
         <p>Facebook | Instagram</p>
     </footer>
 
+    <script src="js/enquiry.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 
 </html>

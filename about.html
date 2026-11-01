@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sunrise Bakery</title>
+    <title>About Sunrise Bakery | Family Bakery in Centurion</title>
+    <meta name="description" content="Learn about Sunrise Bakery, a family-owned bakery in Centurion since 2015, and our mission to bake fresh, affordable food for the local community.">
+    <meta name="keywords" content="about Sunrise Bakery, family bakery, bakery since 2015, Centurion bakery, mission and vision">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -49,6 +51,30 @@
             </p>
         </section>
 
+        <!-- Gallery: click a picture to open it in the lightbox -->
+        <section class="gallery">
+            <h2>Our Gallery</h2>
+            <p>Click a picture to see it bigger.</p>
+
+            <div class="gallery-grid">
+                <img src="images/bread-basket-baguettes.jpg"
+                     alt="Wicker basket of fresh baguettes and bread loaves from Sunrise Bakery"
+                     loading="lazy">
+                <img src="images/chocolate-birthday-cake.jpg"
+                     alt="Chocolate birthday cake with chocolate drip and piped icing"
+                     loading="lazy">
+                <img src="images/assorted-pastries-box.jpg"
+                     alt="Box of assorted fresh pastries with berries and custard"
+                     loading="lazy">
+                <img src="images/baker-fresh-bread-oven.jpg"
+                     alt="Baker taking fresh bread loaves out of the oven"
+                     loading="lazy">
+                <img src="images/bread-loaves-oven-peel.jpg"
+                     alt="Baker sliding fresh bread loaves out of a hot oven on a wooden peel"
+                     loading="lazy">
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -58,6 +84,17 @@
         <p>Facebook | Instagram</p>
     </footer>
 
+    <!-- Lightbox: hidden until a gallery picture is clicked -->
+    <div id="lightbox" class="lightbox" hidden>
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close picture">&times;</button>
+        <button id="lightboxPrevious" class="lightbox-arrow" aria-label="Previous picture">&#10094;</button>
+        <img id="lightboxImage" src="" alt="">
+        <button id="lightboxNext" class="lightbox-arrow" aria-label="Next picture">&#10095;</button>
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
