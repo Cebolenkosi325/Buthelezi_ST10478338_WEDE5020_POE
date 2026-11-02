@@ -226,7 +226,6 @@ The following changes were made after reviewing the Part 2 feedback:
 - Added focus and active states.
 - Added tablet and small mobile breakpoints.
 - Improved responsive images and navigation.
-- Corrected the home page hero image path to use a forward slash instead of a backslash.
 
 ## 11. Part 3: JavaScript Development
 
@@ -378,30 +377,46 @@ The website files are stored in the GitHub repository, and Git is used to upload
 - Added the website colour scheme and typography.
 - Styled the header, navigation and footer.
 - Styled product cards and forms.
-- Added hover, focus and active effects.
-- Improved alignment and spacing.
-- Added responsive media queries.
-- Improved the website for tablets and mobile phones.
-- Corrected the hero image path.
+- Added hover effects.
+- Added a mobile media query.
 - Updated the README with project details and references.
 
-### Part 3 – JavaScript, SEO and Deployment
+### Changes from Part 2 Feedback (27 October to 1 November 2026)
 
-- Added JavaScript form validation.
-- Added the interactive picture gallery.
-- Added the FAQ accordion.
-- Added the Leaflet interactive map.
-- Added dynamic product loading.
-- Added product searching, filtering and sorting.
-- Added the current page navigation indicator.
-- Added the bakery opening-status message.
-- Added SEO metadata to all five pages.
-- Renamed image files using descriptive filenames.
-- Added image alternative text.
-- Added lazy loading to appropriate images.
-- Created `robots.txt` and `sitemap.xml`.
-- Published the website using GitHub Pages.
-- Updated the README with the completed project information.
+Each point below is a comment from the Part 2 marking, followed by what I changed.
+
+- Layout structure (alignment and spacing problems):
+  - Removed the section:first-of-type rule. It gave the first section on every page the home page hero styling. The hero styles now only apply to the .hero class.
+  - Added space between paragraphs and headings in the About, Contact and Enquiry sections, because the global margin reset had removed it. The h3 headings now have the same brown colour and spacing as the h2 headings.
+  - Made the body a column layout and let the main section grow, so the footer stays at the bottom of the screen on short pages. Removed the gap above the footer.
+  - Aligned the form labels and fields to the left inside the centred sections.
+- Decoration and colour (not applied consistently):
+  - The product page cards now have the same white background, rounded corners and shadow as the home page cards.
+  - Every heading uses the same brown and every button the same orange on all pages.
+  - Added a hover shadow on the cards and a short transition on the buttons.
+- Pseudo-classes (used but insufficiently): added :focus on the menu links, buttons and form fields, :active on the menu links and buttons, :hover on the cards, :first-child and :last-child in the footer, and ::placeholder for the form hints.
+- Media queries: added a tablet breakpoint (1024px) and a small phone breakpoint (480px) next to the mobile breakpoint (768px).
+- Responsive layout: on mobile and small phones the cards stack in one column, the forms use more of the width, and the buttons become full width on small phones.
+- Responsive typography: the heading and paragraph sizes change at the tablet, mobile and small phone sizes.
+- Responsive navigation: on mobile the menu links wrap and show as buttons with padding and a light background. On small phones they sit two in a row.
+- Responsive images: all images have max-width 100%. The hero picture height changes at each breakpoint (320px, 250px and 200px), and the card pictures keep object-fit: cover.
+- GitHub commits: the work is saved in several separate commits, and each message says what was changed.
+- README: rewrote the README with links, tools, SEO, security, this changelog and a full reference list.
+- References: rewrote the reference list in Harvard style with the web address and the date each page was opened.
+
+### Part 3 – JavaScript, SEO and Deployment (27 October to 1 November 2026)
+
+- enquiry.html and js/enquiry.js (new): the form has full name, email, phone number, enquiry type, number of people, date, a preferred contact method (radio buttons), a message and a consent checkbox. The script checks every field and shows a red border and a message under each wrong field, and the message disappears when the visitor starts typing. When the form is correct, the page shows a response: a general enquiry gets a reply within one working day, and a custom cake (R40 per person, 3 days notice) or catering order (R85 per person, 7 days notice) gets the availability for the date and an estimated cost.
+- contact.html and js/contact.js (new): the form has full name, email, an optional phone number, the type of message and the message. The script checks the fields, puts the details into an email addressed to info@sunrisebakery.co.za, shows the email on the page and opens the visitor's email app. A button opens the email again.
+- about.html and js/gallery.js (new): added a gallery of five pictures. A click opens a picture in a lightbox with next and previous buttons, and it closes with the X button or a click on the dark area.
+- enquiry.html and js/accordion.js (new): added a FAQ accordion with four questions. One answer is open at a time, and the answers fade in.
+- contact.html and js/map.js (new): added a Leaflet and OpenStreetMap map with three markers and popups, and three buttons that move the map to each place.
+- product.html and js/products.js (new): the product list is built by JavaScript from an array of 12 products. Added a search box, a category filter and a sort option (name, price low to high, price high to low), a result count, and a message when nothing matches.
+- js/script.js: this file was empty in Part 1. It now underlines the menu link of the current page and adds a line to the footer that says whether the bakery is open now.
+- SEO: added a title tag, meta description and meta keywords to all five pages, renamed the five pictures with descriptive names, wrote alt text for each, added lazy loading to the pictures below the top of the page, and added robots.txt and sitemap.xml.
+- css/style.css: added the styles for the form errors, gallery and lightbox, product search and cards, accordion, map, current menu link and open status line, with smaller layouts for phones.
+- Rewrote js/gallery.js, js/accordion.js, js/products.js, js/enquiry.js and js/contact.js in a simpler style that is closer to the class examples. The features are the same, except that the lightbox no longer closes with the Esc key or moves with the arrow keys.
+- Published the website with GitHub Pages at https://cebolenkosi325.github.io/Buthelezi_ST10478338_WEDE5020_POE/
 
 ## 17. References
 
@@ -431,18 +446,4 @@ The following sources were used for learning and development.
 
 ### Image References
 
-The five bakery pictures used in this project were discovered using Google Images.
-
-Google Images is a search service. The links below are search records, not verified original image-owner pages. The original website, creator and publication details must be checked against the actual downloaded image before final academic submission.
-
-1. **Bread basket and baguettes:** https://www.google.com/search?tbm=isch&q=bread+basket+baguettes+fresh+bread
-2. **Chocolate birthday cake:** https://www.google.com/search?tbm=isch&q=chocolate+birthday+cake+chocolate+drip
-3. **Assorted pastries:** https://www.google.com/search?tbm=isch&q=assorted+fresh+pastries+box
-4. **Baker taking bread from an oven:** https://www.google.com/search?tbm=isch&q=baker+taking+fresh+bread+out+of+oven
-5. **Bread loaves and oven peel:** https://www.google.com/search?tbm=isch&q=bread+loaves+oven+peel
-
-
-
----
-
-**End of README.md**
+- Google Images (n.d.) Photographs of bread, a chocolate birthday cake, pastries and bakers at work (the five pictures in the images folder, downloaded using Google Images). Available at: https://images.google.com (Accessed: 12 August 2026). The pictures are used only for this student project.
